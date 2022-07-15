@@ -2,8 +2,8 @@
 import {execute} from '../../functions/exec';
 export default async function handler(req, res) {
   try {
-    let result = await execute('goal nodestatus')
-    // let result = await execute('pwd')
+    // let result = await execute('goal nodestatus')
+    let result = await execute('pwd')
   console.log(result)
   res.status(200).send(result)
   } catch (error) {
