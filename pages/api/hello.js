@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     // let result = await execute('goal nodestatus')
     let result = await execute('pwd')
   console.log(result)
-  res.status(200).send(result)
+  res.status(200).json(result)
   } catch (error) {
     console.log(error)
     res.status(200).send()
