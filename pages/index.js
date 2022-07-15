@@ -32,9 +32,9 @@ export default function Home() {
 <Box sx={{ backgroundColor: 'white', borderRadius: 2, p: 2, mt: 5}}>
 
 {data && 
-        <MuiMarkdown>
+        // <MuiMarkdown>
         {data}
-      </MuiMarkdown>
+      // </MuiMarkdown>
     }
 </Box>
     
