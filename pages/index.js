@@ -10,11 +10,11 @@ export default function Home() {
   const fetcher = (url) => fetch(url).then((res) => res.json());
   const [goalResult, setGoalResult] = React.useState(undefined);
   
-  const { data, error } = useSWR(
+  let { data, error } = useSWR(
     "/api/hello",
     fetcher
   );
-
+// data = "Last committed block: 8323170\nTime since last block: 8.3s\nSync Time: 52263.7s\nLast consensus protocol: https://github.com/algorandfoundation/specs/tree/e5f565421d720c6f75cdd186f7098495caf9101f\nNext consensus protocol: https://github.com/algorandfoundation/specs/tree/e5f565421d720c6f75cdd186f7098495caf9101f\nRound for next consensus protocol: 8323171\nNext consensus protocol supported: true\nLast Catchpoint: \nGenesis ID: mainnet-v1.0\nGenesis hash: wGHE2Pwdvd7S12BL5FaOP20EGYesN73ktiC1qzkkit8=\n"
   return (
     <div className={styles.container}>
       <Head>
@@ -31,11 +31,13 @@ export default function Home() {
     </Stack>
 <Box sx={{maxWidth:370, backgroundColor: 'white', borderRadius: 2, p: 2, mt: 5}}>
 
-{data && 
+{data && data.split('\n').map((x, index) => {
+  return <Typography key={index} variant='body1'>
+  {x.substring(0, 50)}
+  </Typography>
+})
         // <MuiMarkdown>
-        <Typography variant='body1'>
-        {data}
-        </Typography>
+        
       // </MuiMarkdown>
     }
 </Box>
