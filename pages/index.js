@@ -29,7 +29,7 @@ export default function Home() {
         <Button href="http://10.0.1.179:8080" variant='contained'> Flood Torrent</Button>
         <Button href="https://10.0.1.179:9443" variant='contained'> Portainer</Button> 
     </Stack>
-<Box sx={{ backgroundColor: 'white', borderRadius: 2, p: 2, mt: 5}}>
+<Box sx={{maxWidth:370, backgroundColor: 'white', borderRadius: 2, p: 2, mt: 5}}>
 
 {data && 
         // <MuiMarkdown>
