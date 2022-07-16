@@ -33,7 +33,9 @@ export default function Home() {
 
 {data && 
         // <MuiMarkdown>
+        <Typography variant='body1'>
         {data}
+        </Typography>
       // </MuiMarkdown>
     }
 </Box>
