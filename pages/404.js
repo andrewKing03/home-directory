@@ -18,6 +18,6 @@ export default function _error (props) {
   </Box></>
 
   return (
-    <>Typography>404040404044</Typography>
+    <Typography>404040404044</Typography>
   );
 }
