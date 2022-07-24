@@ -1,11 +1,10 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+
 import { Box, Typography } from "@material-ui/core";
 import Image from 'next/image'
-const useStyles = makeStyles(typographyStyle);
 
 export default function _error (props) {
-  const classes = useStyles();
+  
   const { ...rest } = props;
 
   const mainContent = <></>
