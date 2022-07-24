@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Typography } from "@mui/core";
+import { Typography } from "@mui/material";
 import Image from 'next/image'
 
 export default function _error (props) {
