@@ -2,7 +2,7 @@
 import {execute} from '../../functions/exec';
 export default async function handler(req, res) {
   try {
-    let result = ''//await execute('goal node status')
+    let result = await execute('goal node status')
     // let result = await execute('pwd')
     let response = await fetch('http://home.lan/idx/health')
     response = await response.json()
