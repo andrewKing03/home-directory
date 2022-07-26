@@ -31,8 +31,10 @@ export default function Home() {
         <Button href="https://10.0.1.179:9443" variant='contained'> Portainer</Button> 
     </Stack>
 <Box sx={{maxWidth:370, backgroundColor: 'white', borderRadius: 2, p: 2, mt: 5}}>
-
-{data && data.split('\n').map((x, index) => {
+{data.indexer && 
+  <Typography key='indexer' variant='body1'>{data.indexer.round}</Typography>
+}
+{data.node && data.node.split('\n').map((x, index) => {
   return <Typography key={index} variant='body1'>
   {x.substring(0, 50)}
   </Typography>
